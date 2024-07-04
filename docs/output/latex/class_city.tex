@@ -1,0 +1,120 @@
+\hypertarget{class_city}{}\doxysection{City Class Reference}
+\label{class_city}\index{City@{City}}
+Inheritance diagram for City\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_city}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_city_ab17ec436af8f0e8bb93d6bafc8af8ac4}{City}} (int id, string code, string city, float demand, int population)
+\item 
+int \mbox{\hyperlink{class_city_ab75821702633ddf2caa951ee27f0c04f}{get\+Id}} () const override
+\item 
+string \mbox{\hyperlink{class_city_aafca2aefdeb66167f824cc5a950bd656}{get\+Code}} () const override
+\item 
+string \mbox{\hyperlink{class_city_a04d188aa55b378d435581a3a14dbe35e}{get\+City\+Name}} () const
+\item 
+float \mbox{\hyperlink{class_city_afe09db984da8278e771a727e6f586444}{get\+Demand}} () const
+\item 
+int \mbox{\hyperlink{class_city_a23be6779c2ba1f5ee0f303b9a160216d}{get\+Population}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents the delivery sites in the water supply network 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_city_ab17ec436af8f0e8bb93d6bafc8af8ac4}\label{class_city_ab17ec436af8f0e8bb93d6bafc8af8ac4}} 
+\index{City@{City}!City@{City}}
+\index{City@{City}!City@{City}}
+\doxysubsubsection{\texorpdfstring{City()}{City()}}
+{\footnotesize\ttfamily City\+::\+City (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{string}]{code,  }\item[{string}]{city,  }\item[{float}]{demand,  }\item[{int}]{population }\end{DoxyParamCaption})}
+
+Constructor of the \mbox{\hyperlink{class_city}{City}} class 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the city \\
+\hline
+{\em code} & Code of the city \\
+\hline
+{\em city} & Name of the city \\
+\hline
+{\em demand} & Water demand of the delivery site in m3/sec \\
+\hline
+{\em population} & Total population of the delivery site \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_city_a04d188aa55b378d435581a3a14dbe35e}\label{class_city_a04d188aa55b378d435581a3a14dbe35e}} 
+\index{City@{City}!getCityName@{getCityName}}
+\index{getCityName@{getCityName}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getCityName()}{getCityName()}}
+{\footnotesize\ttfamily string City\+::get\+City\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Normal method that returns the name of the city
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The name of the city 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_city_aafca2aefdeb66167f824cc5a950bd656}\label{class_city_aafca2aefdeb66167f824cc5a950bd656}} 
+\index{City@{City}!getCode@{getCode}}
+\index{getCode@{getCode}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily string City\+::get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Normal method that returns the Code of a city
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The code of a city 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_node_ab6c7b08067deeeb9e41fda7e5efb938d}{Node}}.
+
+\mbox{\Hypertarget{class_city_afe09db984da8278e771a727e6f586444}\label{class_city_afe09db984da8278e771a727e6f586444}} 
+\index{City@{City}!getDemand@{getDemand}}
+\index{getDemand@{getDemand}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getDemand()}{getDemand()}}
+{\footnotesize\ttfamily float City\+::get\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Normal method that returns the demand of the city
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The water demand of the city 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_city_ab75821702633ddf2caa951ee27f0c04f}\label{class_city_ab75821702633ddf2caa951ee27f0c04f}} 
+\index{City@{City}!getId@{getId}}
+\index{getId@{getId}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int City\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Normal method that returns the Id of a city
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The id of a city 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_node_a04d6761bf0ead66eb628a6ef5abc34e1}{Node}}.
+
+\mbox{\Hypertarget{class_city_a23be6779c2ba1f5ee0f303b9a160216d}\label{class_city_a23be6779c2ba1f5ee0f303b9a160216d}} 
+\index{City@{City}!getPopulation@{getPopulation}}
+\index{getPopulation@{getPopulation}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getPopulation()}{getPopulation()}}
+{\footnotesize\ttfamily int City\+::get\+Population (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Normal method that returns the population of the city
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The population of the city 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Node.\+h\item 
+src/Node.\+cpp\end{DoxyCompactItemize}

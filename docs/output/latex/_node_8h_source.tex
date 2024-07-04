@@ -1,0 +1,70 @@
+\hypertarget{_node_8h_source}{}\doxysection{Node.\+h}
+\label{_node_8h_source}\index{src/Node.h@{src/Node.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef DA\_RAILWAYS\_STATION\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define DA\_RAILWAYS\_STATION\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <Edge.h>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_node}{Node}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} Id;}
+\DoxyCodeLine{20     \textcolor{keywordtype}{string} Code;}
+\DoxyCodeLine{24     list<Edge*> edges = \{\};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{bool} visited = \textcolor{keyword}{false};}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_edge}{Edge}}* path = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{33 \textcolor{keyword}{public}:}
+\DoxyCodeLine{34     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_node}{\string~Node}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_node}{Node}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{string} code);}
+\DoxyCodeLine{46     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_node_a04d6761bf0ead66eb628a6ef5abc34e1}{getId}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{52     \textcolor{keyword}{virtual} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_node_ab6c7b08067deeeb9e41fda7e5efb938d}{getCode}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{58     list<Edge*> \mbox{\hyperlink{class_node_aad60201495d0f0d361bb9dce7b446b94}{getEdges}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{64     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_node_af5064a5215139216f1a7a3bda357ca36}{getVisited}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{70     \mbox{\hyperlink{class_edge}{Edge}}* \mbox{\hyperlink{class_node_aa65cdeade5f183eea5b8642b9a37acbe}{getPath}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{76     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_node_a63586b3e7d507c6ae902491c808553db}{setVisited}}(\textcolor{keywordtype}{bool} Visited);}
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_node_a3e68cd572f56da353146f0bce477e342}{setPath}}(\mbox{\hyperlink{class_edge}{Edge}}* Path);}
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_node_af761aaef36a761a90c4f148a6add914d}{addEdge}}(\mbox{\hyperlink{class_edge}{Edge}}* edge);}
+\DoxyCodeLine{94     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_node_a9bfe1d3a76fb2dff18b9cdf508287d93}{removeEdge}}(\mbox{\hyperlink{class_edge}{Edge}}* edge);}
+\DoxyCodeLine{100     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_node_adf057945e11afd9b14705f01465f2a0d}{getNumEdges}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{101 \};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{107 \textcolor{keyword}{class }\mbox{\hyperlink{class_city}{City}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_node}{Node}} \{}
+\DoxyCodeLine{108 \textcolor{keyword}{private}:}
+\DoxyCodeLine{112     \textcolor{keywordtype}{string} CityName;}
+\DoxyCodeLine{116     \textcolor{keywordtype}{float} Demand;}
+\DoxyCodeLine{120     \textcolor{keywordtype}{int} Population;}
+\DoxyCodeLine{121 \textcolor{keyword}{public}:}
+\DoxyCodeLine{130     \mbox{\hyperlink{class_city}{City}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{string} code, \textcolor{keywordtype}{string} city, \textcolor{keywordtype}{float} demand, \textcolor{keywordtype}{int} population);}
+\DoxyCodeLine{136     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_city_ab75821702633ddf2caa951ee27f0c04f}{getId}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{142     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_city_aafca2aefdeb66167f824cc5a950bd656}{getCode}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{148     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_city_a04d188aa55b378d435581a3a14dbe35e}{getCityName}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{154     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_city_afe09db984da8278e771a727e6f586444}{getDemand}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{160     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_city_a23be6779c2ba1f5ee0f303b9a160216d}{getPopulation}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{161 \};}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{167 \textcolor{keyword}{class }\mbox{\hyperlink{class_reservoir}{Reservoir}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_node}{Node}} \{}
+\DoxyCodeLine{168 \textcolor{keyword}{private}:}
+\DoxyCodeLine{172     \textcolor{keywordtype}{string} ReservoirName;}
+\DoxyCodeLine{176     \textcolor{keywordtype}{string} Municipality;}
+\DoxyCodeLine{180     \textcolor{keywordtype}{int} MaximumDelivery;}
+\DoxyCodeLine{181 \textcolor{keyword}{public}:}
+\DoxyCodeLine{190     \mbox{\hyperlink{class_reservoir}{Reservoir}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{string} code, \textcolor{keywordtype}{string} reservoir, \textcolor{keywordtype}{string} municipality, \textcolor{keywordtype}{int} maximumDelivery);}
+\DoxyCodeLine{196     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_reservoir_a2fc58400c4c198add1bf08b3c377aaf7}{getId}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{202     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_reservoir_a3f69c15165cf2d6a19609506726fad9a}{getCode}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{208     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_reservoir_ad7bb5a1789bfdc077ecb52914d0cb451}{getReservoirName}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{214     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_reservoir_a27c841e69dea2a61c8a0f15ee18f3cf2}{getMunicipality}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{220     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_reservoir_ad70826ea775837c6e00acc76fb57b4e0}{getMaximumDelivery}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{221 \};}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{227 \textcolor{keyword}{class }\mbox{\hyperlink{class_pumping_station}{PumpingStation}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_node}{Node}} \{}
+\DoxyCodeLine{228 \textcolor{keyword}{public}:}
+\DoxyCodeLine{234     \mbox{\hyperlink{class_pumping_station}{PumpingStation}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{string} code);}
+\DoxyCodeLine{240     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_pumping_station_ac9e5226694d93ffe39053906661b8a58}{getId}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{246     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_pumping_station_aecf3cbdccf243d3af594538c2716ef8f}{getCode}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{247 \};}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_RAILWAYS\_STATION\_H}}
+
+\end{DoxyCode}

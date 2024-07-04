@@ -1,0 +1,108 @@
+\hypertarget{class_edge}{}\doxysection{Edge Class Reference}
+\label{class_edge}\index{Edge@{Edge}}
+
+
+{\ttfamily \#include $<$Edge.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_edge_a6c1588ea2e5eb2f0ec8e06292a57c9ad}{Edge}} (string origin, string dest, int capacity)
+\item 
+string \mbox{\hyperlink{class_edge_a03d33ea65192c48a65c71c7e62b4eec6}{get\+Origin}} () const
+\item 
+string \mbox{\hyperlink{class_edge_ad0bd6eb4c7c0799930f2e0462e8cfecc}{get\+Dest}} () const
+\item 
+int \mbox{\hyperlink{class_edge_a225e92785fb02e0e985e19fe3346686b}{get\+Capacity}} () const
+\item 
+int \mbox{\hyperlink{class_edge_a7d4ea1360d5d2dc593f4daa772283e8f}{get\+Flow}} () const
+\item 
+void \mbox{\hyperlink{class_edge_a56fae090f6e499a0b032a2046234fe44}{set\+Flow}} (int Flow)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the edges of the graph/network segments. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_edge_a6c1588ea2e5eb2f0ec8e06292a57c9ad}\label{class_edge_a6c1588ea2e5eb2f0ec8e06292a57c9ad}} 
+\index{Edge@{Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{Edge()}{Edge()}}
+{\footnotesize\ttfamily Edge\+::\+Edge (\begin{DoxyParamCaption}\item[{string}]{origin,  }\item[{string}]{dest,  }\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+Constructor of the \mbox{\hyperlink{class_edge}{Edge}} class 
+\begin{DoxyParams}{Parameters}
+{\em origin} & Origin node\textquotesingle{}s code \\
+\hline
+{\em dest} & Destination node\textquotesingle{}s code \\
+\hline
+{\em capacity} & Capacity of the edge \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_edge_a225e92785fb02e0e985e19fe3346686b}\label{class_edge_a225e92785fb02e0e985e19fe3346686b}} 
+\index{Edge@{Edge}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Edge\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Normal method that returns the edge\textquotesingle{}s capacity
+
+Time Complexity -\/ O(1). \begin{DoxyReturn}{Returns}
+Capacity of the edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_ad0bd6eb4c7c0799930f2e0462e8cfecc}\label{class_edge_ad0bd6eb4c7c0799930f2e0462e8cfecc}} 
+\index{Edge@{Edge}!getDest@{getDest}}
+\index{getDest@{getDest}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getDest()}{getDest()}}
+{\footnotesize\ttfamily string Edge\+::get\+Dest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Normal method that returns the edge\textquotesingle{}s destination
+
+Time Complexity -\/ O(1). \begin{DoxyReturn}{Returns}
+Destination node\textquotesingle{}s code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_a7d4ea1360d5d2dc593f4daa772283e8f}\label{class_edge_a7d4ea1360d5d2dc593f4daa772283e8f}} 
+\index{Edge@{Edge}!getFlow@{getFlow}}
+\index{getFlow@{getFlow}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getFlow()}{getFlow()}}
+{\footnotesize\ttfamily int Edge\+::get\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Normal method that returns the edge\textquotesingle{}s flow
+
+Time Complexity -\/ O(1). \begin{DoxyReturn}{Returns}
+Flow of the edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_a03d33ea65192c48a65c71c7e62b4eec6}\label{class_edge_a03d33ea65192c48a65c71c7e62b4eec6}} 
+\index{Edge@{Edge}!getOrigin@{getOrigin}}
+\index{getOrigin@{getOrigin}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getOrigin()}{getOrigin()}}
+{\footnotesize\ttfamily string Edge\+::get\+Origin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Normal method that returns the edge\textquotesingle{}s origin
+
+Time Complexity -\/ O(1). \begin{DoxyReturn}{Returns}
+Origin node\textquotesingle{}s code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_a56fae090f6e499a0b032a2046234fe44}\label{class_edge_a56fae090f6e499a0b032a2046234fe44}} 
+\index{Edge@{Edge}!setFlow@{setFlow}}
+\index{setFlow@{setFlow}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{setFlow()}{setFlow()}}
+{\footnotesize\ttfamily void Edge\+::set\+Flow (\begin{DoxyParamCaption}\item[{int}]{Flow }\end{DoxyParamCaption})}
+
+Normal method that sets the edge\textquotesingle{}s flow
+
+Time Complexity -\/ O(1). 
+\begin{DoxyParams}{Parameters}
+{\em Flow} & Flow of the edge \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Edge.\+h\item 
+src/Edge.\+cpp\end{DoxyCompactItemize}

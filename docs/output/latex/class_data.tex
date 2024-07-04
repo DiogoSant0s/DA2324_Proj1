@@ -1,0 +1,148 @@
+\hypertarget{class_data}{}\doxysection{Data Class Reference}
+\label{class_data}\index{Data@{Data}}
+
+
+{\ttfamily \#include $<$Data.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_data_af11f741cb7f587e2e495452a8905a22a}{Data}} ()
+\item 
+void \mbox{\hyperlink{class_data_a7386c69e03288596a735e7e3b3a9f44a}{read\+Data}} (const string \&extension)
+\item 
+bool \mbox{\hyperlink{class_data_ae21111feaf9f9f8e1b5f886b44c2a144}{check\+If\+It\+Exists}} (const string \&code)
+\item 
+\mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_data_af4938d49dd8f19da1e0a9171191f35df}{get\+Water\+Network}} ()
+\item 
+void \mbox{\hyperlink{class_data_a897b3def65e85f31b8aeaa3cee432e37}{Max\+Flow}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static wstring \mbox{\hyperlink{class_data_a5b31280aa22d56f382cd5d6a3197bdb1}{string\+To\+Wstring}} (const string \&str)
+\item 
+static string \mbox{\hyperlink{class_data_a5ad5fe554882a51f0ffbed4fb102638a}{wstring\+To\+String}} (const wstring \&wstr)
+\item 
+static wstring \mbox{\hyperlink{class_data_aee01948a1a251f1b51fb0e0f817fd40c}{remove\+Accents}} (wstring wstr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that stores all the data from the files and the Water\+Network. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_data_af11f741cb7f587e2e495452a8905a22a}\label{class_data_af11f741cb7f587e2e495452a8905a22a}} 
+\index{Data@{Data}!Data@{Data}}
+\index{Data@{Data}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{Data()}{Data()}}
+{\footnotesize\ttfamily Data\+::\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates the Water\+Network.
+
+Constructor of the \mbox{\hyperlink{class_data}{Data}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_data_ae21111feaf9f9f8e1b5f886b44c2a144}\label{class_data_ae21111feaf9f9f8e1b5f886b44c2a144}} 
+\index{Data@{Data}!checkIfItExists@{checkIfItExists}}
+\index{checkIfItExists@{checkIfItExists}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{checkIfItExists()}{checkIfItExists()}}
+{\footnotesize\ttfamily bool Data\+::check\+If\+It\+Exists (\begin{DoxyParamCaption}\item[{const string \&}]{code }\end{DoxyParamCaption})}
+
+Checks if \mbox{\hyperlink{class_node}{Node}} exists in nodes hash table.
+
+Time Complexity -\/ O(1). 
+\begin{DoxyParams}{Parameters}
+{\em code} & \mbox{\hyperlink{class_node}{Node}}\textquotesingle{}s code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True -\/ If the station exists. 
+
+False -\/ If the station doesn\textquotesingle{}t exist. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_data_af4938d49dd8f19da1e0a9171191f35df}\label{class_data_af4938d49dd8f19da1e0a9171191f35df}} 
+\index{Data@{Data}!getWaterNetwork@{getWaterNetwork}}
+\index{getWaterNetwork@{getWaterNetwork}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{getWaterNetwork()}{getWaterNetwork()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}} Data\+::get\+Water\+Network (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Normal method that returns the Water\+Network
+
+Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+Water\+Network 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_data_a897b3def65e85f31b8aeaa3cee432e37}\label{class_data_a897b3def65e85f31b8aeaa3cee432e37}} 
+\index{Data@{Data}!MaxFlow@{MaxFlow}}
+\index{MaxFlow@{MaxFlow}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{MaxFlow()}{MaxFlow()}}
+{\footnotesize\ttfamily void Data\+::\+Max\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calls the Edmonds\+Karp method from the \mbox{\hyperlink{class_graph}{Graph}} class and writes the results to two different files
+
+Time Complexity\+: O($\vert$\+V$\vert$ $\ast$ $\vert$\+E$\vert$$^\wedge$2)
+
+V is the number of vertices/nodes and E is the number of edges/links. \mbox{\Hypertarget{class_data_a7386c69e03288596a735e7e3b3a9f44a}\label{class_data_a7386c69e03288596a735e7e3b3a9f44a}} 
+\index{Data@{Data}!readData@{readData}}
+\index{readData@{readData}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{readData()}{readData()}}
+{\footnotesize\ttfamily void Data\+::read\+Data (\begin{DoxyParamCaption}\item[{const string \&}]{extension }\end{DoxyParamCaption})}
+
+Reads all the data saved in the files and stores them in the correct structures.
+
+Time Complexity -\/ O(\+N).
+
+N is the number of lines in the files to be read. \mbox{\Hypertarget{class_data_aee01948a1a251f1b51fb0e0f817fd40c}\label{class_data_aee01948a1a251f1b51fb0e0f817fd40c}} 
+\index{Data@{Data}!removeAccents@{removeAccents}}
+\index{removeAccents@{removeAccents}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{removeAccents()}{removeAccents()}}
+{\footnotesize\ttfamily wstring Data\+::remove\+Accents (\begin{DoxyParamCaption}\item[{wstring}]{wstr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Auxiliary method to remove accents from a wstring
+
+Time Complexity -\/ O(1). 
+\begin{DoxyParams}{Parameters}
+{\em wstr} & Wstring from which the accents are to be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+wstring without accents 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_data_a5b31280aa22d56f382cd5d6a3197bdb1}\label{class_data_a5b31280aa22d56f382cd5d6a3197bdb1}} 
+\index{Data@{Data}!stringToWstring@{stringToWstring}}
+\index{stringToWstring@{stringToWstring}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{stringToWstring()}{stringToWstring()}}
+{\footnotesize\ttfamily wstring Data\+::string\+To\+Wstring (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Auxiliary method to convert a string to a wstring
+
+Time Complexity-\/ O(1). 
+\begin{DoxyParams}{Parameters}
+{\em str} & String that is to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+wstring resulting from the conversion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_data_a5ad5fe554882a51f0ffbed4fb102638a}\label{class_data_a5ad5fe554882a51f0ffbed4fb102638a}} 
+\index{Data@{Data}!wstringToString@{wstringToString}}
+\index{wstringToString@{wstringToString}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{wstringToString()}{wstringToString()}}
+{\footnotesize\ttfamily string Data\+::wstring\+To\+String (\begin{DoxyParamCaption}\item[{const wstring \&}]{wstr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Auxiliary method to convert a wstring to a string
+
+Time Complexity -\/ O(1). 
+\begin{DoxyParams}{Parameters}
+{\em wstr} & Wstring that is to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string resulting from the conversion 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Data.\+h\item 
+src/Data.\+cpp\end{DoxyCompactItemize}

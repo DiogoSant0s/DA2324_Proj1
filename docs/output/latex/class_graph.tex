@@ -1,0 +1,386 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}} ()
+\item 
+void \mbox{\hyperlink{class_graph_a61ac8fabdae8e65e14f7bbabff5fd388}{add\+Node}} (const string \&node\+Code, \mbox{\hyperlink{class_node}{Node}} $\ast$node)
+\item 
+void \mbox{\hyperlink{class_graph_ae8b6ea429d77deb7538481bcbaf794fc}{add\+Edge}} (const string \&source\+Station, const string \&target\+Station, int capacity, bool direction)
+\item 
+void \mbox{\hyperlink{class_graph_add147c2f01d6f6c174ca8b04ca1c18cf}{remove\+Node}} (const string \&code)
+\item 
+unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_node}{Node}} $\ast$ $>$ \mbox{\hyperlink{class_graph_a536ab98955e9e97290fe9ac15e6251b3}{get\+Nodes}} ()
+\item 
+list$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ \mbox{\hyperlink{class_graph_abcec71263d16f36452d15318bd434fa5}{get\+Edges}} (const string \&code)
+\item 
+list$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ \mbox{\hyperlink{class_graph_a8fd86eb86fed8d2cc2f983a109eb6e51}{get\+Incoming\+Edges}} (const string \&code)
+\item 
+bool \mbox{\hyperlink{class_graph_a42adc88ffed0d8d2ae69d8afad92681d}{Check\+If\+Node\+Exists}} (const string \&code)
+\item 
+void \mbox{\hyperlink{class_graph_a5830dd35a90540f0ef64c2300eb3c82b}{set\+Unvisited}} ()
+\item 
+void \mbox{\hyperlink{class_graph_a3ba499a6fb861d16c2e613861d9b5b08}{edmonds\+Karp}} ()
+\item 
+bool \mbox{\hyperlink{class_graph_ae81a3b6c0dc6792377b28b42e4bf44b6}{find\+Augmenting\+Path}} (\mbox{\hyperlink{class_node}{Node}} $\ast$src, \mbox{\hyperlink{class_node}{Node}} $\ast$dest)
+\item 
+int \mbox{\hyperlink{class_graph_a0d9e99966deba4109db984c0a9359930}{find\+Min\+Residual\+Along\+Path}} (\mbox{\hyperlink{class_node}{Node}} $\ast$src, \mbox{\hyperlink{class_node}{Node}} $\ast$dest)
+\item 
+void \mbox{\hyperlink{class_graph_aa9c332415527d96f702935b847f4876e}{augment\+Flow\+Along\+Path}} (\mbox{\hyperlink{class_node}{Node}} $\ast$src, \mbox{\hyperlink{class_node}{Node}} $\ast$dest, int f)
+\item 
+list$<$ pair$<$ \mbox{\hyperlink{class_city}{City}} $\ast$, float $>$ $>$ \mbox{\hyperlink{class_graph_aa55e8e4716c4cb3f1caf50015a0fa181}{Water\+Deficit}} (int \&total\+Supply, float \&total\+Demand)
+\item 
+list$<$ pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, double $>$ $>$ \mbox{\hyperlink{class_graph_ae42298fbdbbd91e0f7d7e3474939e8da}{Compute\+Metrics}} (double \&max\+Difference, double \&average\+Difference, double \&variance)
+\item 
+void \mbox{\hyperlink{class_graph_ac8716123aed0714386ecc6d44344fa25}{balance\+Load}} (list$<$ pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, double $>$ $>$ list)
+\item 
+list$<$ pair$<$ \mbox{\hyperlink{class_city}{City}} $\ast$, double $>$ $>$ \mbox{\hyperlink{class_graph_a58911493a71190783c6c3f18002b3b1d}{evaluate\+Reservoir\+Impact}} (const string \&code)
+\item 
+list$<$ pair$<$ \mbox{\hyperlink{class_city}{City}} $\ast$, double $>$ $>$ \mbox{\hyperlink{class_graph_a31ce81d7aca03911ba941e840b466ccd}{evaluate\+Pumping\+Station\+Impact}} (const string \&code)
+\item 
+unordered\+\_\+map$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, list$<$ pair$<$ \mbox{\hyperlink{class_city}{City}} $\ast$, double $>$ $>$ $>$ \mbox{\hyperlink{class_graph_a4abe4fb6627ecd6e08f49fe36f082ba4}{evaluate\+Pipeline\+Impact}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_graph_a7593d25a6d0671753305fbc6b2285235}{test\+And\+Visit}} (queue$<$ \mbox{\hyperlink{class_node}{Node}} $\ast$ $>$ \&queue, \mbox{\hyperlink{class_edge}{Edge}} $\ast$edge, \mbox{\hyperlink{class_node}{Node}} $\ast$node, double residual)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents the water supply network in Portugal as a graph. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}\label{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Creates a new \mbox{\hyperlink{class_graph}{Graph}}.
+
+Constructor of the \mbox{\hyperlink{class_graph}{Graph}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_ae8b6ea429d77deb7538481bcbaf794fc}\label{class_graph_ae8b6ea429d77deb7538481bcbaf794fc}} 
+\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{const string \&}]{source\+Station,  }\item[{const string \&}]{target\+Station,  }\item[{int}]{capacity,  }\item[{bool}]{direction }\end{DoxyParamCaption})}
+
+Add an edge from a source station to a target station
+
+Time Complexity -\/ O(1). 
+\begin{DoxyParams}{Parameters}
+{\em source\+Station} & The source station. \\
+\hline
+{\em target\+Station} & The target station. \\
+\hline
+{\em capacity} & Waterway\textquotesingle{}s segment capacity \\
+\hline
+{\em direction} & Direction of the waterway, true if it is unidirectional, false if it is bidirectional \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a61ac8fabdae8e65e14f7bbabff5fd388}\label{class_graph_a61ac8fabdae8e65e14f7bbabff5fd388}} 
+\index{Graph@{Graph}!addNode@{addNode}}
+\index{addNode@{addNode}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addNode()}{addNode()}}
+{\footnotesize\ttfamily void Graph\+::add\+Node (\begin{DoxyParamCaption}\item[{const string \&}]{node\+Code,  }\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+Add a node to the \mbox{\hyperlink{class_graph}{Graph}} using the node code as a key and the node\textquotesingle{}s information as value.
+
+Time Complexity -\/ O(1). 
+\begin{DoxyParams}{Parameters}
+{\em node\+Code} & The code of the node \\
+\hline
+{\em node} & All of the node\textquotesingle{}s information \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_aa9c332415527d96f702935b847f4876e}\label{class_graph_aa9c332415527d96f702935b847f4876e}} 
+\index{Graph@{Graph}!augmentFlowAlongPath@{augmentFlowAlongPath}}
+\index{augmentFlowAlongPath@{augmentFlowAlongPath}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{augmentFlowAlongPath()}{augmentFlowAlongPath()}}
+{\footnotesize\ttfamily void Graph\+::augment\+Flow\+Along\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{src,  }\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{dest,  }\item[{int}]{f }\end{DoxyParamCaption})}
+
+Augment flow along the augmenting path with the given flow value
+
+Time Complexity\+: O($\vert$\+V$\vert$)
+
+V is the number of vertices/nodes 
+\begin{DoxyParams}{Parameters}
+{\em src} & Source \mbox{\hyperlink{class_node}{Node}} \\
+\hline
+{\em dest} & Destination \mbox{\hyperlink{class_node}{Node}} \\
+\hline
+{\em f} & Flow value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_ac8716123aed0714386ecc6d44344fa25}\label{class_graph_ac8716123aed0714386ecc6d44344fa25}} 
+\index{Graph@{Graph}!balanceLoad@{balanceLoad}}
+\index{balanceLoad@{balanceLoad}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{balanceLoad()}{balanceLoad()}}
+{\footnotesize\ttfamily void Graph\+::balance\+Load (\begin{DoxyParamCaption}\item[{list$<$ pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, double $>$ $>$}]{list }\end{DoxyParamCaption})}
+
+Redistribute the flow in the network
+
+Time Complexity\+: O($\vert$\+C$\vert$ $\ast$ $\vert$\+E$\vert$)
+
+C is the number of cities and E is the number of edges/links. \mbox{\Hypertarget{class_graph_a42adc88ffed0d8d2ae69d8afad92681d}\label{class_graph_a42adc88ffed0d8d2ae69d8afad92681d}} 
+\index{Graph@{Graph}!CheckIfNodeExists@{CheckIfNodeExists}}
+\index{CheckIfNodeExists@{CheckIfNodeExists}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{CheckIfNodeExists()}{CheckIfNodeExists()}}
+{\footnotesize\ttfamily bool Graph\+::\+Check\+If\+Node\+Exists (\begin{DoxyParamCaption}\item[{const string \&}]{code }\end{DoxyParamCaption})}
+
+Checks if a node with the provided code exists in the graph
+
+Time Complexity -\/ O(1). 
+\begin{DoxyParams}{Parameters}
+{\em code} & \mbox{\hyperlink{class_node}{Node}}\textquotesingle{}s code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True -\/ If the station exists. 
+
+False -\/ If the station doesn\textquotesingle{}t exist. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_ae42298fbdbbd91e0f7d7e3474939e8da}\label{class_graph_ae42298fbdbbd91e0f7d7e3474939e8da}} 
+\index{Graph@{Graph}!ComputeMetrics@{ComputeMetrics}}
+\index{ComputeMetrics@{ComputeMetrics}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{ComputeMetrics()}{ComputeMetrics()}}
+{\footnotesize\ttfamily list$<$ pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, double $>$ $>$ Graph\+::\+Compute\+Metrics (\begin{DoxyParamCaption}\item[{double \&}]{max\+Difference,  }\item[{double \&}]{average\+Difference,  }\item[{double \&}]{variance }\end{DoxyParamCaption})}
+
+Compute the metrics of the network flow
+
+Time Complexity\+: O($\vert$\+V$\vert$ $\ast$ $\vert$\+E$\vert$ + $\vert$\+E$\vert$)
+
+V is the number of vertices/nodes and E is the number of edges/links. 
+\begin{DoxyParams}{Parameters}
+{\em max\+Difference} & The maximum difference between the capacity and the flow of all edges \\
+\hline
+{\em average\+Difference} & The average difference between the capacity and the flow of all edges \\
+\hline
+{\em variance} & The variance of the difference between the capacity and the flow of all edges \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of edges and their respective difference between the capacity and the flow 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a3ba499a6fb861d16c2e613861d9b5b08}\label{class_graph_a3ba499a6fb861d16c2e613861d9b5b08}} 
+\index{Graph@{Graph}!edmondsKarp@{edmondsKarp}}
+\index{edmondsKarp@{edmondsKarp}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{edmondsKarp()}{edmondsKarp()}}
+{\footnotesize\ttfamily void Graph\+::edmonds\+Karp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Find the maximum flow through the network using Edmonds-\/\+Karp algorithm
+
+Time Complexity\+: O($\vert$\+V$\vert$ $\ast$ $\vert$\+E$\vert$$^\wedge$²)
+
+V is the number of vertices/nodes and E is the number of edges/links. \mbox{\Hypertarget{class_graph_a4abe4fb6627ecd6e08f49fe36f082ba4}\label{class_graph_a4abe4fb6627ecd6e08f49fe36f082ba4}} 
+\index{Graph@{Graph}!evaluatePipelineImpact@{evaluatePipelineImpact}}
+\index{evaluatePipelineImpact@{evaluatePipelineImpact}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{evaluatePipelineImpact()}{evaluatePipelineImpact()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, list$<$ pair$<$ \mbox{\hyperlink{class_city}{City}} $\ast$, double $>$ $>$ $>$ Graph\+::evaluate\+Pipeline\+Impact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Find the cities that were affected by the removal of a pipeline
+
+Time Complexity\+: O($\vert$\+V$\vert$$^\wedge$2 $\ast$ $\vert$\+E$\vert$$^\wedge$2)
+
+V is the number of vertices/nodes and E is the number of edges/links. \begin{DoxyReturn}{Returns}
+A hash table with the pipelines and the cities that were affected by the pipeline removal, with the respective impact 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a31ce81d7aca03911ba941e840b466ccd}\label{class_graph_a31ce81d7aca03911ba941e840b466ccd}} 
+\index{Graph@{Graph}!evaluatePumpingStationImpact@{evaluatePumpingStationImpact}}
+\index{evaluatePumpingStationImpact@{evaluatePumpingStationImpact}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{evaluatePumpingStationImpact()}{evaluatePumpingStationImpact()}}
+{\footnotesize\ttfamily list$<$ pair$<$ \mbox{\hyperlink{class_city}{City}} $\ast$, double $>$ $>$ Graph\+::evaluate\+Pumping\+Station\+Impact (\begin{DoxyParamCaption}\item[{const string \&}]{code }\end{DoxyParamCaption})}
+
+Find the cities that were affected by the removal of the pumping station with the given code
+
+Time Complexity\+: O($\vert$\+V$\vert$ $\ast$ $\vert$\+E$\vert$)
+
+V is the number of vertices/nodes and E is the number of edges/links. 
+\begin{DoxyParams}{Parameters}
+{\em code} & The code of the pumping station to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of cities that were affected by the pumping station removal, with the respective impact 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a58911493a71190783c6c3f18002b3b1d}\label{class_graph_a58911493a71190783c6c3f18002b3b1d}} 
+\index{Graph@{Graph}!evaluateReservoirImpact@{evaluateReservoirImpact}}
+\index{evaluateReservoirImpact@{evaluateReservoirImpact}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{evaluateReservoirImpact()}{evaluateReservoirImpact()}}
+{\footnotesize\ttfamily list$<$ pair$<$ \mbox{\hyperlink{class_city}{City}} $\ast$, double $>$ $>$ Graph\+::evaluate\+Reservoir\+Impact (\begin{DoxyParamCaption}\item[{const string \&}]{code }\end{DoxyParamCaption})}
+
+Find the cities that were affected by the removal of the reservoir with the given code
+
+Time Complexity\+: O($\vert$\+V$\vert$ $\ast$ $\vert$\+E$\vert$)
+
+V is the number of vertices/nodes and E is the number of edges/links. 
+\begin{DoxyParams}{Parameters}
+{\em code} & The code of the reservoir to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of cities that were affected by the reservoir removal, with the respective impact 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_ae81a3b6c0dc6792377b28b42e4bf44b6}\label{class_graph_ae81a3b6c0dc6792377b28b42e4bf44b6}} 
+\index{Graph@{Graph}!findAugmentingPath@{findAugmentingPath}}
+\index{findAugmentingPath@{findAugmentingPath}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{findAugmentingPath()}{findAugmentingPath()}}
+{\footnotesize\ttfamily bool Graph\+::find\+Augmenting\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{src,  }\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{dest }\end{DoxyParamCaption})}
+
+Find an augmenting path in the graph using BFS
+
+Time Complexity\+: O($\vert$\+V$\vert$ + $\vert$\+E$\vert$ $\ast$ log($\vert$\+V$\vert$)) 
+\begin{DoxyParams}{Parameters}
+{\em src} & Source \mbox{\hyperlink{class_node}{Node}} \\
+\hline
+{\em dest} & Destination \mbox{\hyperlink{class_node}{Node}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True -\/ If it is possible. 
+
+False -\/ If it isn\textquotesingle{}t possible. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a0d9e99966deba4109db984c0a9359930}\label{class_graph_a0d9e99966deba4109db984c0a9359930}} 
+\index{Graph@{Graph}!findMinResidualAlongPath@{findMinResidualAlongPath}}
+\index{findMinResidualAlongPath@{findMinResidualAlongPath}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{findMinResidualAlongPath()}{findMinResidualAlongPath()}}
+{\footnotesize\ttfamily int Graph\+::find\+Min\+Residual\+Along\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{src,  }\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{dest }\end{DoxyParamCaption})}
+
+Find the minimum residual capacity along the augmenting path
+
+Time Complexity\+: O($\vert$\+V$\vert$)
+
+V is the number of vertices/nodes 
+\begin{DoxyParams}{Parameters}
+{\em src} & Source \mbox{\hyperlink{class_node}{Node}} \\
+\hline
+{\em dest} & Destination \mbox{\hyperlink{class_node}{Node}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The minimum residual capacity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_abcec71263d16f36452d15318bd434fa5}\label{class_graph_abcec71263d16f36452d15318bd434fa5}} 
+\index{Graph@{Graph}!getEdges@{getEdges}}
+\index{getEdges@{getEdges}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getEdges()}{getEdges()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ Graph\+::get\+Edges (\begin{DoxyParamCaption}\item[{const string \&}]{code }\end{DoxyParamCaption})}
+
+Normal method that returns the edges of the provided \mbox{\hyperlink{class_node}{Node}}
+
+Time Complexity\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em code} & Code of the \mbox{\hyperlink{class_node}{Node}} to get the edges from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The edges of the provided \mbox{\hyperlink{class_node}{Node}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a8fd86eb86fed8d2cc2f983a109eb6e51}\label{class_graph_a8fd86eb86fed8d2cc2f983a109eb6e51}} 
+\index{Graph@{Graph}!getIncomingEdges@{getIncomingEdges}}
+\index{getIncomingEdges@{getIncomingEdges}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getIncomingEdges()}{getIncomingEdges()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ Graph\+::get\+Incoming\+Edges (\begin{DoxyParamCaption}\item[{const string \&}]{code }\end{DoxyParamCaption})}
+
+Normal method that returns the incoming edges of the provided \mbox{\hyperlink{class_node}{Node}}
+
+Time Complexity\+: O($\vert$\+V$\vert$ $\ast$ $\vert$\+E$\vert$)
+
+V is the number of vertices/nodes and E is the number of edges/links. 
+\begin{DoxyParams}{Parameters}
+{\em code} & Code of the \mbox{\hyperlink{class_node}{Node}} to get the incoming edges from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The incoming edges of the provided \mbox{\hyperlink{class_node}{Node}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a536ab98955e9e97290fe9ac15e6251b3}\label{class_graph_a536ab98955e9e97290fe9ac15e6251b3}} 
+\index{Graph@{Graph}!getNodes@{getNodes}}
+\index{getNodes@{getNodes}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNodes()}{getNodes()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_node}{Node}} $\ast$ $>$ Graph\+::get\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Normal method that returns the object nodes
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The object nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_add147c2f01d6f6c174ca8b04ca1c18cf}\label{class_graph_add147c2f01d6f6c174ca8b04ca1c18cf}} 
+\index{Graph@{Graph}!removeNode@{removeNode}}
+\index{removeNode@{removeNode}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{removeNode()}{removeNode()}}
+{\footnotesize\ttfamily void Graph\+::remove\+Node (\begin{DoxyParamCaption}\item[{const string \&}]{code }\end{DoxyParamCaption})}
+
+Remove a node from the \mbox{\hyperlink{class_graph}{Graph}}.
+
+Time Complexity -\/ O($\vert$\+E$\vert$).
+
+E is the number of edges/links. 
+\begin{DoxyParams}{Parameters}
+{\em code} & The code of the node to remove \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a5830dd35a90540f0ef64c2300eb3c82b}\label{class_graph_a5830dd35a90540f0ef64c2300eb3c82b}} 
+\index{Graph@{Graph}!setUnvisited@{setUnvisited}}
+\index{setUnvisited@{setUnvisited}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{setUnvisited()}{setUnvisited()}}
+{\footnotesize\ttfamily void Graph\+::set\+Unvisited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function sets all the nodes to unvisited state.
+
+Time Complexity -\/ O(\+V).
+
+V is the number of nodes. \mbox{\Hypertarget{class_graph_a7593d25a6d0671753305fbc6b2285235}\label{class_graph_a7593d25a6d0671753305fbc6b2285235}} 
+\index{Graph@{Graph}!testAndVisit@{testAndVisit}}
+\index{testAndVisit@{testAndVisit}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{testAndVisit()}{testAndVisit()}}
+{\footnotesize\ttfamily void Graph\+::test\+And\+Visit (\begin{DoxyParamCaption}\item[{queue$<$ \mbox{\hyperlink{class_node}{Node}} $\ast$ $>$ \&}]{queue,  }\item[{\mbox{\hyperlink{class_edge}{Edge}} $\ast$}]{edge,  }\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{node,  }\item[{double}]{residual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Visit a node and add it to the queue
+
+Time Complexity\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em queue} & Queue of Nodes \\
+\hline
+{\em edge} & \mbox{\hyperlink{class_edge}{Edge}} \\
+\hline
+{\em node} & \mbox{\hyperlink{class_node}{Node}} \\
+\hline
+{\em residual} & Residual capacity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_aa55e8e4716c4cb3f1caf50015a0fa181}\label{class_graph_aa55e8e4716c4cb3f1caf50015a0fa181}} 
+\index{Graph@{Graph}!WaterDeficit@{WaterDeficit}}
+\index{WaterDeficit@{WaterDeficit}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{WaterDeficit()}{WaterDeficit()}}
+{\footnotesize\ttfamily list$<$ pair$<$ \mbox{\hyperlink{class_city}{City}} $\ast$, float $>$ $>$ Graph\+::\+Water\+Deficit (\begin{DoxyParamCaption}\item[{int \&}]{total\+Supply,  }\item[{float \&}]{total\+Demand }\end{DoxyParamCaption})}
+
+Find the cities that have a water deficit
+
+Time Complexity\+: O($\vert$\+V$\vert$ $\ast$ $\vert$\+E$\vert$)
+
+V is the number of vertices/nodes and E is the number of edges/links. 
+\begin{DoxyParams}{Parameters}
+{\em total\+Supply} & Total water supply \\
+\hline
+{\em total\+Demand} & Total water demand \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of cities that have a water deficit 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Graph.\+h\item 
+src/Graph.\+cpp\end{DoxyCompactItemize}

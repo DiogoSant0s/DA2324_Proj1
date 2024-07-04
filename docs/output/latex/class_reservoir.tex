@@ -1,0 +1,120 @@
+\hypertarget{class_reservoir}{}\doxysection{Reservoir Class Reference}
+\label{class_reservoir}\index{Reservoir@{Reservoir}}
+Inheritance diagram for Reservoir\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_reservoir}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reservoir_afe89cb5a8b5e0891227a900d32e5514f}{Reservoir}} (int id, string code, string reservoir, string municipality, int maximum\+Delivery)
+\item 
+int \mbox{\hyperlink{class_reservoir_a2fc58400c4c198add1bf08b3c377aaf7}{get\+Id}} () const override
+\item 
+string \mbox{\hyperlink{class_reservoir_a3f69c15165cf2d6a19609506726fad9a}{get\+Code}} () const override
+\item 
+string \mbox{\hyperlink{class_reservoir_ad7bb5a1789bfdc077ecb52914d0cb451}{get\+Reservoir\+Name}} () const
+\item 
+string \mbox{\hyperlink{class_reservoir_a27c841e69dea2a61c8a0f15ee18f3cf2}{get\+Municipality}} () const
+\item 
+int \mbox{\hyperlink{class_reservoir_ad70826ea775837c6e00acc76fb57b4e0}{get\+Maximum\+Delivery}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents the water sources in the water supply network 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_reservoir_afe89cb5a8b5e0891227a900d32e5514f}\label{class_reservoir_afe89cb5a8b5e0891227a900d32e5514f}} 
+\index{Reservoir@{Reservoir}!Reservoir@{Reservoir}}
+\index{Reservoir@{Reservoir}!Reservoir@{Reservoir}}
+\doxysubsubsection{\texorpdfstring{Reservoir()}{Reservoir()}}
+{\footnotesize\ttfamily Reservoir\+::\+Reservoir (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{string}]{code,  }\item[{string}]{reservoir,  }\item[{string}]{municipality,  }\item[{int}]{maximum\+Delivery }\end{DoxyParamCaption})}
+
+Constructor of the \mbox{\hyperlink{class_reservoir}{Reservoir}} class 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the reservoir \\
+\hline
+{\em code} & Code of the reservoir \\
+\hline
+{\em reservoir} & Name of the reservoir \\
+\hline
+{\em municipality} & Name of the municipality where the reservoir is located \\
+\hline
+{\em maximum\+Delivery} & Maximum delivery of the reservoir in m3/sec \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_reservoir_a3f69c15165cf2d6a19609506726fad9a}\label{class_reservoir_a3f69c15165cf2d6a19609506726fad9a}} 
+\index{Reservoir@{Reservoir}!getCode@{getCode}}
+\index{getCode@{getCode}!Reservoir@{Reservoir}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily string Reservoir\+::get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Normal method that returns the Code of a reservoir
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The code of a reservoir 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_node_ab6c7b08067deeeb9e41fda7e5efb938d}{Node}}.
+
+\mbox{\Hypertarget{class_reservoir_a2fc58400c4c198add1bf08b3c377aaf7}\label{class_reservoir_a2fc58400c4c198add1bf08b3c377aaf7}} 
+\index{Reservoir@{Reservoir}!getId@{getId}}
+\index{getId@{getId}!Reservoir@{Reservoir}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Reservoir\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Normal method that returns the Id of a reservoir
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The id of a reservoir 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_node_a04d6761bf0ead66eb628a6ef5abc34e1}{Node}}.
+
+\mbox{\Hypertarget{class_reservoir_ad70826ea775837c6e00acc76fb57b4e0}\label{class_reservoir_ad70826ea775837c6e00acc76fb57b4e0}} 
+\index{Reservoir@{Reservoir}!getMaximumDelivery@{getMaximumDelivery}}
+\index{getMaximumDelivery@{getMaximumDelivery}!Reservoir@{Reservoir}}
+\doxysubsubsection{\texorpdfstring{getMaximumDelivery()}{getMaximumDelivery()}}
+{\footnotesize\ttfamily int Reservoir\+::get\+Maximum\+Delivery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Normal method that returns the maximum delivery of the reservoir
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The maximum delivery of the reservoir 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_reservoir_a27c841e69dea2a61c8a0f15ee18f3cf2}\label{class_reservoir_a27c841e69dea2a61c8a0f15ee18f3cf2}} 
+\index{Reservoir@{Reservoir}!getMunicipality@{getMunicipality}}
+\index{getMunicipality@{getMunicipality}!Reservoir@{Reservoir}}
+\doxysubsubsection{\texorpdfstring{getMunicipality()}{getMunicipality()}}
+{\footnotesize\ttfamily string Reservoir\+::get\+Municipality (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Normal method that returns the municipality of the reservoir
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The municipality of the reservoir 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_reservoir_ad7bb5a1789bfdc077ecb52914d0cb451}\label{class_reservoir_ad7bb5a1789bfdc077ecb52914d0cb451}} 
+\index{Reservoir@{Reservoir}!getReservoirName@{getReservoirName}}
+\index{getReservoirName@{getReservoirName}!Reservoir@{Reservoir}}
+\doxysubsubsection{\texorpdfstring{getReservoirName()}{getReservoirName()}}
+{\footnotesize\ttfamily string Reservoir\+::get\+Reservoir\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Normal method that returns the name of the reservoir
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The name of the reservoir 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Node.\+h\item 
+src/Node.\+cpp\end{DoxyCompactItemize}

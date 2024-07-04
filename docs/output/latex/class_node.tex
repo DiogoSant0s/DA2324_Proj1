@@ -1,0 +1,187 @@
+\hypertarget{class_node}{}\doxysection{Node Class Reference}
+\label{class_node}\index{Node@{Node}}
+Inheritance diagram for Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_node}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_node_a6eb33d7b27230a34ccee680cdeade7d2}{Node}} (int id, string code)
+\item 
+virtual int \mbox{\hyperlink{class_node_a04d6761bf0ead66eb628a6ef5abc34e1}{get\+Id}} () const
+\item 
+virtual string \mbox{\hyperlink{class_node_ab6c7b08067deeeb9e41fda7e5efb938d}{get\+Code}} () const
+\item 
+list$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ \mbox{\hyperlink{class_node_aad60201495d0f0d361bb9dce7b446b94}{get\+Edges}} () const
+\item 
+bool \mbox{\hyperlink{class_node_af5064a5215139216f1a7a3bda357ca36}{get\+Visited}} () const
+\item 
+\mbox{\hyperlink{class_edge}{Edge}} $\ast$ \mbox{\hyperlink{class_node_aa65cdeade5f183eea5b8642b9a37acbe}{get\+Path}} () const
+\item 
+void \mbox{\hyperlink{class_node_a63586b3e7d507c6ae902491c808553db}{set\+Visited}} (bool Visited)
+\item 
+void \mbox{\hyperlink{class_node_a3e68cd572f56da353146f0bce477e342}{set\+Path}} (\mbox{\hyperlink{class_edge}{Edge}} $\ast$Path)
+\item 
+void \mbox{\hyperlink{class_node_af761aaef36a761a90c4f148a6add914d}{add\+Edge}} (\mbox{\hyperlink{class_edge}{Edge}} $\ast$edge)
+\item 
+void \mbox{\hyperlink{class_node_a9bfe1d3a76fb2dff18b9cdf508287d93}{remove\+Edge}} (\mbox{\hyperlink{class_edge}{Edge}} $\ast$edge)
+\item 
+int \mbox{\hyperlink{class_node_adf057945e11afd9b14705f01465f2a0d}{get\+Num\+Edges}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class keeps the data of each of the 3 different types of nodes 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_node_a6eb33d7b27230a34ccee680cdeade7d2}\label{class_node_a6eb33d7b27230a34ccee680cdeade7d2}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{string}]{code }\end{DoxyParamCaption})}
+
+Constructor of the \mbox{\hyperlink{class_node}{Node}} class 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the node \\
+\hline
+{\em code} & Code of the node \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_node_af761aaef36a761a90c4f148a6add914d}\label{class_node_af761aaef36a761a90c4f148a6add914d}} 
+\index{Node@{Node}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Node\+::add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_edge}{Edge}} $\ast$}]{edge }\end{DoxyParamCaption})}
+
+Normal method that adds an edge to the list of edges of a node
+
+Time Complexity\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em edge} & The edge to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_ab6c7b08067deeeb9e41fda7e5efb938d}\label{class_node_ab6c7b08067deeeb9e41fda7e5efb938d}} 
+\index{Node@{Node}!getCode@{getCode}}
+\index{getCode@{getCode}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily string Node\+::get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual method that returns the Code of a node
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The code of a node 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_city_aafca2aefdeb66167f824cc5a950bd656}{City}}, \mbox{\hyperlink{class_reservoir_a3f69c15165cf2d6a19609506726fad9a}{Reservoir}}, and \mbox{\hyperlink{class_pumping_station_aecf3cbdccf243d3af594538c2716ef8f}{Pumping\+Station}}.
+
+\mbox{\Hypertarget{class_node_aad60201495d0f0d361bb9dce7b446b94}\label{class_node_aad60201495d0f0d361bb9dce7b446b94}} 
+\index{Node@{Node}!getEdges@{getEdges}}
+\index{getEdges@{getEdges}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getEdges()}{getEdges()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ Node\+::get\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Normal method that returns the list of edges of a node
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The list of edges of a node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_a04d6761bf0ead66eb628a6ef5abc34e1}\label{class_node_a04d6761bf0ead66eb628a6ef5abc34e1}} 
+\index{Node@{Node}!getId@{getId}}
+\index{getId@{getId}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Node\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual method that returns the Id of a node
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The id of a node 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_city_ab75821702633ddf2caa951ee27f0c04f}{City}}, \mbox{\hyperlink{class_reservoir_a2fc58400c4c198add1bf08b3c377aaf7}{Reservoir}}, and \mbox{\hyperlink{class_pumping_station_ac9e5226694d93ffe39053906661b8a58}{Pumping\+Station}}.
+
+\mbox{\Hypertarget{class_node_adf057945e11afd9b14705f01465f2a0d}\label{class_node_adf057945e11afd9b14705f01465f2a0d}} 
+\index{Node@{Node}!getNumEdges@{getNumEdges}}
+\index{getNumEdges@{getNumEdges}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getNumEdges()}{getNumEdges()}}
+{\footnotesize\ttfamily int Node\+::get\+Num\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Normal method that returns the number of edges of a node
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The number of edges of a node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_aa65cdeade5f183eea5b8642b9a37acbe}\label{class_node_aa65cdeade5f183eea5b8642b9a37acbe}} 
+\index{Node@{Node}!getPath@{getPath}}
+\index{getPath@{getPath}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_edge}{Edge}} $\ast$ Node\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Normal method that returns the path of a node
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The path of a node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_af5064a5215139216f1a7a3bda357ca36}\label{class_node_af5064a5215139216f1a7a3bda357ca36}} 
+\index{Node@{Node}!getVisited@{getVisited}}
+\index{getVisited@{getVisited}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getVisited()}{getVisited()}}
+{\footnotesize\ttfamily bool Node\+::get\+Visited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Normal method that returns the visited attribute of a node
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+The visited attribute of a node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_a9bfe1d3a76fb2dff18b9cdf508287d93}\label{class_node_a9bfe1d3a76fb2dff18b9cdf508287d93}} 
+\index{Node@{Node}!removeEdge@{removeEdge}}
+\index{removeEdge@{removeEdge}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{removeEdge()}{removeEdge()}}
+{\footnotesize\ttfamily void Node\+::remove\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_edge}{Edge}} $\ast$}]{edge }\end{DoxyParamCaption})}
+
+Normal method that removes an edge from the list of edges of a node and deletes it
+
+Time Complexity\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em edge} & The edge to be removed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_a3e68cd572f56da353146f0bce477e342}\label{class_node_a3e68cd572f56da353146f0bce477e342}} 
+\index{Node@{Node}!setPath@{setPath}}
+\index{setPath@{setPath}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{setPath()}{setPath()}}
+{\footnotesize\ttfamily void Node\+::set\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_edge}{Edge}} $\ast$}]{Path }\end{DoxyParamCaption})}
+
+Normal method that sets the path of a node
+
+Time Complexity\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em path} & The path of a node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_a63586b3e7d507c6ae902491c808553db}\label{class_node_a63586b3e7d507c6ae902491c808553db}} 
+\index{Node@{Node}!setVisited@{setVisited}}
+\index{setVisited@{setVisited}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{setVisited()}{setVisited()}}
+{\footnotesize\ttfamily void Node\+::set\+Visited (\begin{DoxyParamCaption}\item[{bool}]{Visited }\end{DoxyParamCaption})}
+
+Normal method that sets the visited of a node
+
+Time Complexity\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em Visited} & The visited attribute of a node \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Node.\+h\item 
+src/Node.\+cpp\end{DoxyCompactItemize}

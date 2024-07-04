@@ -1,0 +1,32 @@
+\hypertarget{_data_8h_source}{}\doxysection{Data.\+h}
+\label{_data_8h_source}\index{src/Data.h@{src/Data.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef DA\_RAILWAYS\_DATA\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define DA\_RAILWAYS\_DATA\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <iomanip>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <codecvt>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <locale>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}Graph.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_data}{Data}} \{}
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_graph}{Graph}} WaterNetwork;}
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_data_af11f741cb7f587e2e495452a8905a22a}{Data}}();}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_data_a7386c69e03288596a735e7e3b3a9f44a}{readData}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& extension);}
+\DoxyCodeLine{37     \textcolor{keyword}{static} wstring \mbox{\hyperlink{class_data_a5b31280aa22d56f382cd5d6a3197bdb1}{stringToWstring}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& str);}
+\DoxyCodeLine{44     \textcolor{keyword}{static} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_data_a5ad5fe554882a51f0ffbed4fb102638a}{wstringToString}}(\textcolor{keyword}{const} wstring\& wstr);}
+\DoxyCodeLine{51     \textcolor{keyword}{static} wstring \mbox{\hyperlink{class_data_aee01948a1a251f1b51fb0e0f817fd40c}{removeAccents}}(wstring wstr);}
+\DoxyCodeLine{59     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_data_ae21111feaf9f9f8e1b5f886b44c2a144}{checkIfItExists}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&code) ;}
+\DoxyCodeLine{65     \mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_data_af4938d49dd8f19da1e0a9171191f35df}{getWaterNetwork}}();}
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_data_a897b3def65e85f31b8aeaa3cee432e37}{MaxFlow}}();}
+\DoxyCodeLine{72 \};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_RAILWAYS\_DATA\_H}}
+
+\end{DoxyCode}

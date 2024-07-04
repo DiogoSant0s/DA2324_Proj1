@@ -1,0 +1,167 @@
+\hypertarget{class_menu}{}\doxysection{Menu Class Reference}
+\label{class_menu}\index{Menu@{Menu}}
+
+
+{\ttfamily \#include $<$Menu.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_menu_ad466dd83355124a6ed958430450bfe94}{Menu}} ()
+\item 
+void \mbox{\hyperlink{class_menu_af3706574de6e8dc100b5796854b72dfd}{Select\+Graph\+Menu}} ()
+\item 
+void \mbox{\hyperlink{class_menu_a3b8b00715336601914f644ab6dbe17af}{Main\+Menu}} ()
+\item 
+void \mbox{\hyperlink{class_menu_ac05ca786b3a6b5a57120cfb89581e39c}{Node\+Info}} ()
+\item 
+void \mbox{\hyperlink{class_menu_aff07796b623b31c420b172cf3b57006e}{Max\+Flow\+Menu}} ()
+\item 
+void \mbox{\hyperlink{class_menu_a9d074c62eee5030111107dd12b4145bf}{Water\+Network\+Menu}} ()
+\item 
+void \mbox{\hyperlink{class_menu_a2c440dc986ec5d66908e2c8aec7df169}{Resiliency\+Menu}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_menu_a8f97d9f899ffefdd2e9860adf4c86c39}{print\+Title}} ()
+\item 
+static int \mbox{\hyperlink{class_menu_a5ddb2e9403391596669bba5f64bea959}{get\+User\+Input}} (vector$<$ int $>$ inputs)
+\item 
+static string \mbox{\hyperlink{class_menu_a2fa79c3f48e3c3b1b7233d864ce9ce85}{get\+User\+Text\+Input}} ()
+\item 
+static void \mbox{\hyperlink{class_menu_ae3a5edcb580112ec449d12d9eb5a3e7c}{clear\+Screen}} ()
+\item 
+static void \mbox{\hyperlink{class_menu_a79b4da6104523531755a53a3875b058b}{Print}} (const string \&s, int linelength)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class that is responsible for the interaction between the user and the data.
+
+It\textquotesingle{}s the UI of this project. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_menu_ad466dd83355124a6ed958430450bfe94}\label{class_menu_ad466dd83355124a6ed958430450bfe94}} 
+\index{Menu@{Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Menu()}{Menu()}}
+{\footnotesize\ttfamily Menu\+::\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor of the \mbox{\hyperlink{class_menu}{Menu}} class.
+
+Calls the Select\+Graph\+Menu method to start the program. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_menu_ae3a5edcb580112ec449d12d9eb5a3e7c}\label{class_menu_ae3a5edcb580112ec449d12d9eb5a3e7c}} 
+\index{Menu@{Menu}!clearScreen@{clearScreen}}
+\index{clearScreen@{clearScreen}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{clearScreen()}{clearScreen()}}
+{\footnotesize\ttfamily void Menu\+::clear\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Void method that \char`\"{}cleans\char`\"{} the screen
+
+Time Complexity\+: O(1) \mbox{\Hypertarget{class_menu_a5ddb2e9403391596669bba5f64bea959}\label{class_menu_a5ddb2e9403391596669bba5f64bea959}} 
+\index{Menu@{Menu}!getUserInput@{getUserInput}}
+\index{getUserInput@{getUserInput}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{getUserInput()}{getUserInput()}}
+{\footnotesize\ttfamily int Menu\+::get\+User\+Input (\begin{DoxyParamCaption}\item[{vector$<$ int $>$}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Void method that verifies if the user\textquotesingle{}s input is valid.
+
+Time Complexity\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em inputs} & Integer vector with the possible inputs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer input of the user 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_menu_a2fa79c3f48e3c3b1b7233d864ce9ce85}\label{class_menu_a2fa79c3f48e3c3b1b7233d864ce9ce85}} 
+\index{Menu@{Menu}!getUserTextInput@{getUserTextInput}}
+\index{getUserTextInput@{getUserTextInput}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{getUserTextInput()}{getUserTextInput()}}
+{\footnotesize\ttfamily string Menu\+::get\+User\+Text\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Void method that verifies if the user\textquotesingle{}s input is valid, for a string input.
+
+Time Complexity\+: O(1) \begin{DoxyReturn}{Returns}
+String input of the user 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_menu_a3b8b00715336601914f644ab6dbe17af}\label{class_menu_a3b8b00715336601914f644ab6dbe17af}} 
+\index{Menu@{Menu}!MainMenu@{MainMenu}}
+\index{MainMenu@{MainMenu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{MainMenu()}{MainMenu()}}
+{\footnotesize\ttfamily void Menu\+::\+Main\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Normal method that prints the Main menu options to the user.
+
+Time Complexity\+: O(1) \mbox{\Hypertarget{class_menu_aff07796b623b31c420b172cf3b57006e}\label{class_menu_aff07796b623b31c420b172cf3b57006e}} 
+\index{Menu@{Menu}!MaxFlowMenu@{MaxFlowMenu}}
+\index{MaxFlowMenu@{MaxFlowMenu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{MaxFlowMenu()}{MaxFlowMenu()}}
+{\footnotesize\ttfamily void Menu\+::\+Max\+Flow\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Normal method that prints the Max Flow menu options to the user.
+
+Time Complexity\+: O(1) \mbox{\Hypertarget{class_menu_ac05ca786b3a6b5a57120cfb89581e39c}\label{class_menu_ac05ca786b3a6b5a57120cfb89581e39c}} 
+\index{Menu@{Menu}!NodeInfo@{NodeInfo}}
+\index{NodeInfo@{NodeInfo}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{NodeInfo()}{NodeInfo()}}
+{\footnotesize\ttfamily void Menu\+::\+Node\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Normal method that prints the \mbox{\hyperlink{class_node}{Node}} menu options to the user.
+
+Time Complexity\+: O(1) \mbox{\Hypertarget{class_menu_a79b4da6104523531755a53a3875b058b}\label{class_menu_a79b4da6104523531755a53a3875b058b}} 
+\index{Menu@{Menu}!Print@{Print}}
+\index{Print@{Print}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void Menu\+::\+Print (\begin{DoxyParamCaption}\item[{const string \&}]{s,  }\item[{int}]{linelength }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Void method that prints a string with a maximum line length
+
+Time Complexity\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em s} & string to be printed \\
+\hline
+{\em linelength} & Size of the line \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_menu_a8f97d9f899ffefdd2e9860adf4c86c39}\label{class_menu_a8f97d9f899ffefdd2e9860adf4c86c39}} 
+\index{Menu@{Menu}!printTitle@{printTitle}}
+\index{printTitle@{printTitle}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{printTitle()}{printTitle()}}
+{\footnotesize\ttfamily void Menu\+::print\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Void method that prints the title of the program.
+
+Time Complexity\+: O(1) \mbox{\Hypertarget{class_menu_a2c440dc986ec5d66908e2c8aec7df169}\label{class_menu_a2c440dc986ec5d66908e2c8aec7df169}} 
+\index{Menu@{Menu}!ResiliencyMenu@{ResiliencyMenu}}
+\index{ResiliencyMenu@{ResiliencyMenu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{ResiliencyMenu()}{ResiliencyMenu()}}
+{\footnotesize\ttfamily void Menu\+::\+Resiliency\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Normal method that prints the Resiliency menu options to the user.
+
+Time Complexity\+: O(1) \mbox{\Hypertarget{class_menu_af3706574de6e8dc100b5796854b72dfd}\label{class_menu_af3706574de6e8dc100b5796854b72dfd}} 
+\index{Menu@{Menu}!SelectGraphMenu@{SelectGraphMenu}}
+\index{SelectGraphMenu@{SelectGraphMenu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{SelectGraphMenu()}{SelectGraphMenu()}}
+{\footnotesize\ttfamily void Menu\+::\+Select\+Graph\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Normal method that prints the Select \mbox{\hyperlink{class_graph}{Graph}} menu options to the user.
+
+Time Complexity\+: O(1) \mbox{\Hypertarget{class_menu_a9d074c62eee5030111107dd12b4145bf}\label{class_menu_a9d074c62eee5030111107dd12b4145bf}} 
+\index{Menu@{Menu}!WaterNetworkMenu@{WaterNetworkMenu}}
+\index{WaterNetworkMenu@{WaterNetworkMenu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{WaterNetworkMenu()}{WaterNetworkMenu()}}
+{\footnotesize\ttfamily void Menu\+::\+Water\+Network\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Normal method that prints the Water Network menu options to the user.
+
+Time Complexity\+: O(1) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Menu.\+h\item 
+src/Menu.\+cpp\end{DoxyCompactItemize}

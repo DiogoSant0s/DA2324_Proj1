@@ -1,0 +1,46 @@
+\hypertarget{_graph_8h_source}{}\doxysection{Graph.\+h}
+\label{_graph_8h_source}\index{src/Graph.h@{src/Graph.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef DA\_RAILWAYS\_GRAPH\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define DA\_RAILWAYS\_GRAPH\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <limits>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}Node.h"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_graph}{Graph}} \{}
+\DoxyCodeLine{18 \textcolor{keyword}{private}:}
+\DoxyCodeLine{23     unordered\_map<string, Node*> nodes;}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a61ac8fabdae8e65e14f7bbabff5fd388}{addNode}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& nodeCode, \mbox{\hyperlink{class_node}{Node}}* node);}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ae8b6ea429d77deb7538481bcbaf794fc}{addEdge}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&sourceStation, \textcolor{keyword}{const} \textcolor{keywordtype}{string} \&targetStation, \textcolor{keywordtype}{int} capacity, \textcolor{keywordtype}{bool} direction);}
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_add147c2f01d6f6c174ca8b04ca1c18cf}{removeNode}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& code);}
+\DoxyCodeLine{59     unordered\_map<string, Node*> \mbox{\hyperlink{class_graph_a536ab98955e9e97290fe9ac15e6251b3}{getNodes}}();}
+\DoxyCodeLine{66     list<Edge*> \mbox{\hyperlink{class_graph_abcec71263d16f36452d15318bd434fa5}{getEdges}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& code);}
+\DoxyCodeLine{74     list<Edge*> \mbox{\hyperlink{class_graph_a8fd86eb86fed8d2cc2f983a109eb6e51}{getIncomingEdges}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& code);}
+\DoxyCodeLine{82     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_graph_a42adc88ffed0d8d2ae69d8afad92681d}{CheckIfNodeExists}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& code);}
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a5830dd35a90540f0ef64c2300eb3c82b}{setUnvisited}}() ;}
+\DoxyCodeLine{94     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a3ba499a6fb861d16c2e613861d9b5b08}{edmondsKarp}}();}
+\DoxyCodeLine{103     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_graph_ae81a3b6c0dc6792377b28b42e4bf44b6}{findAugmentingPath}}(\mbox{\hyperlink{class_node}{Node}}* src, \mbox{\hyperlink{class_node}{Node}}* dest);}
+\DoxyCodeLine{112     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a7593d25a6d0671753305fbc6b2285235}{testAndVisit}}(queue<Node*> \&queue, \mbox{\hyperlink{class_edge}{Edge}}* edge, \mbox{\hyperlink{class_node}{Node}}* node, \textcolor{keywordtype}{double} residual);}
+\DoxyCodeLine{121     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_a0d9e99966deba4109db984c0a9359930}{findMinResidualAlongPath}}(\mbox{\hyperlink{class_node}{Node}}* src, \mbox{\hyperlink{class_node}{Node}}* dest);}
+\DoxyCodeLine{130     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_aa9c332415527d96f702935b847f4876e}{augmentFlowAlongPath}}(\mbox{\hyperlink{class_node}{Node}}* src, \mbox{\hyperlink{class_node}{Node}}* dest, \textcolor{keywordtype}{int} f);}
+\DoxyCodeLine{139     list<pair<City*, float>> \mbox{\hyperlink{class_graph_aa55e8e4716c4cb3f1caf50015a0fa181}{WaterDeficit}}(\textcolor{keywordtype}{int} \&totalSupply, \textcolor{keywordtype}{float} \&totalDemand);}
+\DoxyCodeLine{149     list<pair<Edge *, double>> \mbox{\hyperlink{class_graph_ae42298fbdbbd91e0f7d7e3474939e8da}{ComputeMetrics}}(\textcolor{keywordtype}{double} \&maxDifference, \textcolor{keywordtype}{double} \&averageDifference, \textcolor{keywordtype}{double} \&variance);}
+\DoxyCodeLine{155     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ac8716123aed0714386ecc6d44344fa25}{balanceLoad}}(list<pair<Edge *, double>> list);}
+\DoxyCodeLine{163     list<pair<City*, double>> \mbox{\hyperlink{class_graph_a58911493a71190783c6c3f18002b3b1d}{evaluateReservoirImpact}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&code);}
+\DoxyCodeLine{171     list<pair<City *, double>> \mbox{\hyperlink{class_graph_a31ce81d7aca03911ba941e840b466ccd}{evaluatePumpingStationImpact}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&code);}
+\DoxyCodeLine{178     unordered\_map<Edge *, list<pair<City *, double>>> \mbox{\hyperlink{class_graph_a4abe4fb6627ecd6e08f49fe36f082ba4}{evaluatePipelineImpact}}();}
+\DoxyCodeLine{179 \};}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_RAILWAYS\_GRAPH\_H}}
+
+\end{DoxyCode}
